@@ -61,7 +61,7 @@ export default {
         newRegister() {
             axios.post('http://127.0.0.1:8000/api/students/', this.model.user).then(res => {
                 alert("Added Successfully");
-
+                this.$router.push("/")
                 this.model.user = {
                     name: '',
                     course: '',

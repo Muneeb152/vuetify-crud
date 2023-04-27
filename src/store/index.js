@@ -31,7 +31,6 @@ export default new Vuex.Store({
           .get('http://127.0.0.1:8000/api/students/')
           .then(
             (response) => {
-              console.log("Data is:"+response.data.students);
               commit("setListingData", response.data.students);
               commit("setTotalCount", parseInt(response.headers['x-total-count']));
               resolve(response);

@@ -70,6 +70,7 @@ export default {
         editRecord() {
             axios.put(`http://127.0.0.1:8000/api/students/${this.userObj.id}/edit`, this.model.user).then(res => {
                 alert("Record Edited Successfully");
+                this.$emit('goBack', false);
             }).catch(function (error) {
                 alert(error);
 
