@@ -12,16 +12,16 @@
                                 :rules="[() => !!model.user.name || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.course" label="Course" type="text" outlined dense
-                                :rules="[() => !!model.user.course || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.items" label="Items" type="text" outlined dense
+                                :rules="[() => !!model.user.items || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.email" label="Email" type="text" outlined dense
-                                :rules="[() => !!model.user.email || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.discount" label="Email" type="text" outlined dense
+                                :rules="[() => !!model.user.discount || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.phone" label="Phone" type="text" outlined dense
-                                :rules="[() => !!model.user.phone || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.description" label="Phone" type="text" outlined dense
+                                :rules="[() => !!model.user.description || 'This field is required']"></v-text-field>
                         </v-flex>
                         <!-- <v-flex xs12 lg12 class="mb-n1">
                             <v-textarea v-model="model.user.body" name="input-7-1" outlined label="Body" auto-grow
@@ -31,7 +31,7 @@
                         <v-btn @click="goBack" class="me-4">
                             Back
                         </v-btn>
-                        <v-btn :disabled="!model.user.name || !model.user.course || !model.user.email || !model.user.phone" @click="editRecord" class="white--text"
+                        <v-btn :disabled="!model.user.name || !model.user.items || !model.user.discount || !model.user.description" @click="editRecord" class="white--text"
                             color="primary">
                             Save
                         </v-btn>
@@ -51,9 +51,9 @@ export default {
             model: {
                 user: {
                     name:"",
-                    course:"",
-                    email:"",
-                    phone:"",
+                    items:"",
+                    discount:"",
+                    description:"",
                 }
             },
         };
@@ -68,7 +68,7 @@ export default {
     methods:
     {
         editRecord() {
-            axios.put(`http://127.0.0.1:8000/api/students/${this.userObj.id}/edit`, this.model.user).then(res => {
+            axios.put(`http://127.0.0.1:8000/api/products/${this.userObj.id}/edit`, this.model.user).then(res => {
                 alert("Record Edited Successfully");
                 this.$emit('goBack', false);
             }).catch(function (error) {

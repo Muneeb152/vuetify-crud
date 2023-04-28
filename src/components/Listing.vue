@@ -85,10 +85,9 @@ export default {
         value: "id",
       },
       { text: "Name", value: "name", sortable: false, },
-      { text: "Course", value: "course", sortable: false, },
-      { text: "Email", value: "email", sortable: false, },
-      { text: "Phone", value: "phone", sortable: false, },
-      { text: "Created At", value: "created_at", sortable: false, },
+      { text: "Items", value: "items", sortable: false, },
+      { text: "Discount", value: "discount", sortable: false, },
+      { text: "Description", value: "description", sortable: false,},
       { text: "Actions", value: "actions", sortable: false, },
 
     ],
@@ -157,7 +156,7 @@ export default {
 
     deleteItemConfirm() {
       this.dialogDelete = false;
-      axios.delete(`http://127.0.0.1:8000/api/students/${this.delObj.id}/delete`).then(res => {
+      axios.delete(`http://127.0.0.1:8000/api/products/${this.delObj.id}/delete`).then(res => {
         this.fetchData();
         alert("User Deleted Successfully!");
 

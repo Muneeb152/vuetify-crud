@@ -12,21 +12,21 @@
                                 :rules="[() => !!model.user.name || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.course" label="Course" type="text" outlined dense
-                                :rules="[() => !!model.user.course || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.items" label="Items" type="text" outlined dense
+                                :rules="[() => !!model.user.items || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.email" label="Email" type="text" outlined dense
-                                :rules="[() => !!model.user.email || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.discount" label="Discount" type="text" outlined dense
+                                :rules="[() => !!model.user.discount || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.phone" label="Phone" type="text" outlined dense
-                                :rules="[() => !!model.user.phone || 'This field is required']"></v-text-field>
+                            <v-text-field v-model="model.user.description" label="Description" type="text" outlined dense
+                                :rules="[() => !!model.user.description || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-btn @click="goBack" class="me-4">
                             Back
                         </v-btn>
-                        <v-btn @click="newRegister" :disabled="!model.user.name || !model.user.course || !model.user.email || !model.user.phone" class="white--text" color="primary">
+                        <v-btn @click="newRegister" :disabled="!model.user.name || !model.user.items || !model.user.discount || !model.user.description" class="white--text" color="primary">
                             Save
                         </v-btn>
                     </v-layout>
@@ -45,9 +45,9 @@ export default {
             model: {
                 user: {
                     name:"",
-                    course:"",
-                    email:"",
-                    phone:"",
+                    items:"",
+                    discount:"",
+                    description:"",
 
                 }
             },
@@ -59,7 +59,7 @@ export default {
     methods:
     {
         newRegister() {
-            axios.post('http://127.0.0.1:8000/api/students/', this.model.user).then(res => {
+            axios.post('http://127.0.0.1:8000/api/products/', this.model.user).then(res => {
                 alert("Added Successfully");
                 this.$router.push("/")
                 this.model.user = {
