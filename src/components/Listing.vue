@@ -8,7 +8,7 @@
         <template v-slot:top>
           <!---------Tool Bar----------->
           <v-toolbar color="primary" flat>
-            <v-toolbar-title class="white--text">Table Listing
+            <v-toolbar-title class="white--text">Products Listing
             </v-toolbar-title>
             <v-divider class="mx-4" inset vertical></v-divider>
             <v-spacer></v-spacer>
