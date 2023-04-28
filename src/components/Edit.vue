@@ -12,7 +12,7 @@
                                 :rules="[() => !!model.user.name || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.items" label="Items" type="text" outlined dense
+                            <v-text-field v-model="model.user.items" label="Price" type="text" outlined dense
                                 :rules="[() => !!model.user.items || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
@@ -20,7 +20,7 @@
                                 :rules="[() => !!model.user.discount || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.description" label="Phone" type="text" outlined dense
+                            <v-text-field v-model="model.user.description" label="Description" type="text" outlined dense
                                 :rules="[() => !!model.user.description || 'This field is required']"></v-text-field>
                         </v-flex>
                         <!-- <v-flex xs12 lg12 class="mb-n1">

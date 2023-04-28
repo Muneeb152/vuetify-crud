@@ -85,7 +85,7 @@ export default {
         value: "id",
       },
       { text: "Name", value: "name", sortable: false, },
-      { text: "Items", value: "items", sortable: false, },
+      { text: "Price", value: "items", sortable: false, },
       { text: "Discount", value: "discount", sortable: false, },
       { text: "Description", value: "description", sortable: false,},
       { text: "Actions", value: "actions", sortable: false, },

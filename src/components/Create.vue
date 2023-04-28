@@ -12,7 +12,7 @@
                                 :rules="[() => !!model.user.name || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
-                            <v-text-field v-model="model.user.items" label="Items" type="text" outlined dense
+                            <v-text-field v-model="model.user.items" label="Price" type="text" outlined dense
                                 :rules="[() => !!model.user.items || 'This field is required']"></v-text-field>
                         </v-flex>
                         <v-flex xs12 lg12 class="mb-n1">
