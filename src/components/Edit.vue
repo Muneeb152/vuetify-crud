@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <v-card max-width="600" class="pa-8 mt-8 mb-8 rounded mx-auto" outlined>
         <v-card-text xs4>
             <v-layout row class=" mb-n6" wrap justify-space-between>
@@ -23,10 +23,6 @@
                             <v-text-field v-model="model.user.description" label="Description" type="text" outlined dense
                                 :rules="[() => !!model.user.description || 'This field is required']"></v-text-field>
                         </v-flex>
-                        <!-- <v-flex xs12 lg12 class="mb-n1">
-                            <v-textarea v-model="model.user.body" name="input-7-1" outlined label="Body" auto-grow
-                                :rules="[() => !!model.user.body || 'This field is required']"></v-textarea>
-                        </v-flex> -->
 
                         <v-btn @click="goBack" class="me-4">
                             Back
@@ -92,4 +88,4 @@ export default {
     width: 198px;
 }
 </style>
-  
+   -->

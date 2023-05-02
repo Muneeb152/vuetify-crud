@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <v-card max-width="600" class="pa-8 mt-8 mb-8 rounded mx-auto" outlined>
         <v-card-text xs4>
             <v-layout row class=" mb-n6" wrap justify-space-between>
@@ -90,4 +90,4 @@ export default {
     width: 198px;
 }
 </style>
-  
+   -->

@@ -11,12 +11,6 @@ const routes = [
         name: 'Listing',
         component: () => import("@/views/Listing.vue"),
     },
-    {
-        path: '/create',
-        name: 'Create',
-        component: Create,
-    },
-
 
 
 
